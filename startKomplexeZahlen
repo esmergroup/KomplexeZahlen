@@ -1,0 +1,103 @@
+def addition(a1, b1, a2, b2):
+    #Berechnung der Addition einer Komplexen Zahl in Karthesicher Form
+    print("Addition")
+    aerg = a1 + a2
+    berg = b1 + b2
+    if(b1+b2 < 0):
+        print("a + b = ", aerg," ", berg,"i")
+    elif(b1+b2 > 0):
+        print("a + b = ", aerg," + ", berg,"i")
+    print("")
+    main()
+
+def subtraktion(a1, b1, a2, b2):
+    #Berechnung der Subtraktion einer Komplexen Zahl in Karthesischer Form
+    print("Subtraktion")
+    aerg = a1 - a2
+    berg = b1 - b2
+    if(b1 - b2 < 0):
+        print("a - b = ", aerg," ", berg,"i")
+    elif(b1 - b2 > 0):
+        print("a - b = ", aerg," - ", berg,"i")
+    print("")
+    main()
+
+def multiplikation(a1, b1, a2, b2):
+    #Berechnung der Multiplikation einer Komplexen Zahl in Karthesicher Form
+    print("Multiplikation")
+    re = (a1 * a2) - (b1 * b2)
+    im = (b1 * a2) + (b2 * a1)
+    if(im < 0):
+        print("a * b = ", re, " ", im,"i")
+    elif(im > 0):
+        print("a * b = ", re, " + ", im,"i")
+    print("")
+    main()
+
+def division(a1, b1, a2, b2):
+    #Berechnung der division einer Komplexen Zahl in Karthesischer Form
+    print("Division")
+    re = ((a1 * a2) + (b2 * b1)) / ((a2*a2)+(b2*b2))
+    im = ((a2 * b1) - (a1 * b2)) / ((a2*a2)+(b2*b2))
+    if(im < 0):
+        print("a / b = ", re, " ", im,"i")
+    elif(im > 0):
+        print("a / b = ", re, " + ", im,"i")
+    print("")
+    main()
+
+def startKomplexeZahlen():
+    print("")
+    print("--------------")
+    print("PROGRAMM START")
+    print("--------------")
+    print("")
+    main()
+
+def main():
+    print("0 = Addition")
+    print("1 = Subtraktion")
+    print("2 = Multiplikation")
+    print("3 = Division")
+    print("4 = Ende")
+    eingabe = int(input())
+    if(eingabe == 0):
+        print("Geben Sie die Komplexen Zahlen in Karthesischer Form an")
+        a1 = float(input("Geben Sie den Re[Z1] ein:"))
+        b1 = float(input("Geben Sie den Im[Z1] ein:"))
+        a2 = float(input("Geben Sie den Re[Z2] ein:"))
+        b2 = float(input("Geben Sie den Im[Z2] ein:"))
+        addition(a1, b1, a2, b2)
+    elif(eingabe == 1):
+        print("Geben Sie die Komplexen Zahlen in Karthesischer Form an")
+        a1 = float(input("Geben Sie den Re[Z1] ein:"))
+        b1 = float(input("Geben Sie den Im[Z1] ein:"))
+        a2 = float(input("Geben Sie den Re[Z2] ein:"))
+        b2 = float(input("Geben Sie den Im[Z2] ein:"))
+        subtraktion(a1, b1, a2, b2)
+    elif(eingabe == 2):
+        print("Geben Sie die Komplexen Zahlen in Karthesischer Form an")
+        a1 = float(input("Geben Sie den Re[Z1] ein:"))
+        b1 = float(input("Geben Sie den Im[Z1] ein:"))
+        a2 = float(input("Geben Sie den Re[Z2] ein:"))
+        b2 = float(input("Geben Sie den Im[Z2] ein:"))
+        multiplikation(a1, b1, a2, b2)
+    elif(eingabe == 3):
+        print("Geben Sie die Komplexen Zahlen in Karthesischer Form an")
+        a1 = float(input("Geben Sie den Re[Z1] ein:"))
+        b1 = float(input("Geben Sie den Im[Z1] ein:"))
+        a2 = float(input("Geben Sie den Re[Z2] ein:"))
+        b2 = float(input("Geben Sie den Im[Z2] ein:"))
+        division(a1, b1, a2, b2)
+    elif(eingabe == 4):
+        ende()
+
+def ende():
+    print("")
+    print("-------------")
+    print("PROGRAMM ENDE")
+    print("-------------")
+    print("")
+    a = 0
+    while(a == 0):
+        break
